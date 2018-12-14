@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace C_ADMIN_OOSD
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        //Form initialization, anything you want to load when the program loads should be placed here
+        public Main()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
