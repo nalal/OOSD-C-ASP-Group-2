@@ -59,6 +59,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBCall.cs" />
+    <Compile Include="DBData.cs" />
+    <Compile Include="MySQL_TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySQL_TestForm.Designer.cs">
+      <DependentUpon>MySQL_TestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySQL_TestForm.resx">
+      <DependentUpon>MySQL_TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

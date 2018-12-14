@@ -5,12 +5,6 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C-ADMIN-OOSD", "C-ADMIN-OOSD\C-ADMIN-OOSD.csproj", "{A705E2D8-0022-4DD9-BB5F-9E8CD8A9875F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA1051F7-1D06-4B47-8FC3-833FF7907C77}"
-	ProjectSection(SolutionItems) = preProject
-		DBCall.cs = DBCall.cs
-		DBData.cs = DBData.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
