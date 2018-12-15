@@ -5,7 +5,7 @@ using MySql.Data.MySqlClient;
 
 /*
     FILE: DBCall.cs
-    FUCNTION: Interperate calls to MSSQL DB
+    FUCNTION: Connection management for program
 
     Authors: 
     Noah German (Alias: Nalal/Nacalal/Nac)

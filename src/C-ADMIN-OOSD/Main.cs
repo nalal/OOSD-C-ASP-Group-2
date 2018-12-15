@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 /*
     FILE: DBCall.cs
-    FUCNTION: Interperate calls to MSSQL DB
+    FUCNTION: Main form for program
 
     Authors: 
     Noah German (Alias: Nalal/Nacalal/Nac)
@@ -23,7 +23,7 @@ namespace C_ADMIN_OOSD
 {
     public partial class Main : Form
     {
-        //Form initialization, anything you want to load when the program loads should be placed here
+        //Form initialization, anything you want to load when the program loads should be placed here except variables
         public Main()
         {
             InitializeComponent();
