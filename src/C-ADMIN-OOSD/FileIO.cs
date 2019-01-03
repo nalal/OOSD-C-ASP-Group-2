@@ -55,5 +55,22 @@ namespace C_ADMIN_OOSD
                 File.WriteAllLines(filemake, content);
             }
         }
+        public static void edit(string id, int line, string content)
+        {
+            string fileed = Path.Combine(localAD, id);
+            if (File.Exists(fileed) == true)
+            {
+                string[] data = File.ReadAllLines(fileed);
+                /*
+                List<string> lines = new List<string>();
+                foreach (string i in data)
+                {
+                    lines.Add(i);
+                }
+                */
+                data[line] = content;
+                File.WriteAllText(fileed, content);
+            }
+        }
     }
 }

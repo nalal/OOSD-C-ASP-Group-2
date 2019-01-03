@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BMake = new System.Windows.Forms.Button();
+            this.BEd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TBName
@@ -77,11 +78,22 @@
             this.BMake.UseVisualStyleBackColor = true;
             this.BMake.Click += new System.EventHandler(this.BMake_Click);
             // 
+            // BEd
+            // 
+            this.BEd.Location = new System.Drawing.Point(96, 102);
+            this.BEd.Name = "BEd";
+            this.BEd.Size = new System.Drawing.Size(75, 23);
+            this.BEd.TabIndex = 5;
+            this.BEd.Text = "edit";
+            this.BEd.UseVisualStyleBackColor = true;
+            this.BEd.Click += new System.EventHandler(this.BEd_Click);
+            // 
             // FileIOTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 450);
+            this.Controls.Add(this.BEd);
             this.Controls.Add(this.BMake);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -101,5 +113,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BMake;
+        private System.Windows.Forms.Button BEd;
     }
 }
