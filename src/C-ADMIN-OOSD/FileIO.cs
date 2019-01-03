@@ -9,23 +9,29 @@ namespace C_ADMIN_OOSD
 {
     public class FileIO
     {
-        //Create public strings
-        //Use this string to identify things
+        //-Create public strings
+            //Use this string to identify things
         public static string Name = "";
-        //ProgramDIR
+            //_DIR vars
+                //ProgramDIR
         public static string localD = Environment.CurrentDirectory;
-        //Main data DIR
+                //Main data DIR
         public static string localAD = Path.Combine(localD, "Data");
-        //Packages DIR
+                //Packages DIR
         public static string localPD = Path.Combine(localAD, "Packages");
-        //Products DIR
+                //Products DIR
         public static string localPrD = Path.Combine(localAD, "Products");
-        //Product Suppliers DIR
+                //Product Suppliers DIR
         public static string localPrsD = Path.Combine(localAD, "ProductSuppliers");
-        //Suppliers DIR
+                //Suppliers DIR
         public static string localSD = Path.Combine(localAD, "Suppliers");
-        //Packages Product Suppliers DIR
+                //Packages Product Suppliers DIR
         public static string localPpsD = Path.Combine(localAD, "PackagesProductSuppliers");
+            //_Active vars
+                //Active data for file edit
+        public static List<string> activeData = new List<string>();
+
+        //-Init directories
         public static void initDIR()
         {
             //Make DIRs
@@ -36,41 +42,58 @@ namespace C_ADMIN_OOSD
             //Directory.CreateDirectory(localSD);
             //Directory.CreateDirectory(localPpsD);
         }
-        public static bool fileIsThere(string file)
-        {
-            bool result = false;
-            if(File.Exists(file) == true)
-            {
-                result = true;
-            }
-            return result;
-        }
-        //Save content to file
+
+        //-File management
+            //Save content to file
         public static void save(string id, List<string> content)
         {
+                //Create target to make file
             string filemake = Path.Combine(localAD, id);
-            if (File.Exists(filemake) != true)
+                //Validate input
+            if (File.Exists(filemake) == false &&
+                ErrHandle.isNonNull(content[0]) == false &&
+                ErrHandle.isNonNull(id) == false)
             {
+                    //Make and write to file
                 File.Create(filemake).Dispose();
                 File.WriteAllLines(filemake, content);
+            }
+            else
+            {
+                    //Catch error and display message
+                ErrHandle.message();
             }
         }
         public static void edit(string id, int line, string content)
         {
+                //Create target to edit file
             string fileed = Path.Combine(localAD, id);
-            if (File.Exists(fileed) == true)
+                //Verify input
+            if (File.Exists(fileed) == true && 
+                ErrHandle.isNonNull(content) == false &&
+                ErrHandle.isNonNull(line.ToString()) == false &&
+                ErrHandle.isNonNull(id) == false)
             {
                 string[] data = File.ReadAllLines(fileed);
-                /*
-                List<string> lines = new List<string>();
-                foreach (string i in data)
-                {
-                    lines.Add(i);
-                }
-                */
                 data[line] = content;
                 File.WriteAllText(fileed, content);
             }
+            else
+            {
+                ErrHandle.message();
+            }
+        }
+
+        //-Error checking
+            //Check for file to exist in dir
+        public static bool fileIsThere(string file)
+        {
+            bool result = false;
+            if (File.Exists(file) == true)
+            {
+                result = true;
+            }
+            return result;
         }
     }
 }

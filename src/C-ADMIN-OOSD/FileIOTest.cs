@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//This is intended for testing FileIO
 namespace C_ADMIN_OOSD
 {
     public partial class FileIOTest : Form
@@ -16,7 +16,7 @@ namespace C_ADMIN_OOSD
         {
             InitializeComponent();
         }
-
+        //save test
         private void BMake_Click(object sender, EventArgs e)
         {
             string fName = TBName.Text;
@@ -24,7 +24,7 @@ namespace C_ADMIN_OOSD
             fCont.Add(TBTest1.Text);
             FileIO.save(fName, fCont);
         }
-
+        //edit test
         private void BEd_Click(object sender, EventArgs e)
         {
             string fName = TBName.Text;
