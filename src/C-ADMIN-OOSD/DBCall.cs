@@ -13,9 +13,10 @@ using MySql.Data.MySqlClient;
     INIT DATE (D/M/Y): 13/12/2018
 */
 
-public class Class1
+public class DBCall
 {
-    public Class1()
+    public DBCall()
 	{
+        //Refer to FileIO.cs for functions
 	}
 }

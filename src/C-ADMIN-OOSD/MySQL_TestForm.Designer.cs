@@ -49,7 +49,7 @@
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(75, 23);
             this.Login.TabIndex = 0;
-            this.Login.Text = "Login";
+            this.Login.Text = "create";
             this.Login.UseVisualStyleBackColor = true;
             this.Login.Click += new System.EventHandler(this.Login_Click);
             // 

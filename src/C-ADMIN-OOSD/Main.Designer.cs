@@ -33,11 +33,11 @@
             // 
             // BDBTest
             // 
-            this.BDBTest.Location = new System.Drawing.Point(277, 415);
+            this.BDBTest.Location = new System.Drawing.Point(238, 415);
             this.BDBTest.Name = "BDBTest";
-            this.BDBTest.Size = new System.Drawing.Size(75, 23);
+            this.BDBTest.Size = new System.Drawing.Size(114, 23);
             this.BDBTest.TabIndex = 0;
-            this.BDBTest.Text = "DBTest";
+            this.BDBTest.Text = "Nac\'s test button";
             this.BDBTest.UseVisualStyleBackColor = true;
             this.BDBTest.Click += new System.EventHandler(this.BDBTest_Click);
             // 

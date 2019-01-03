@@ -22,6 +22,7 @@ namespace C_ADMIN_OOSD
 {
     public partial class MySQL_TestForm : Form
     {
+        
         private string TestOutput = "TEST:\n";
         public MySQL_TestForm()
         {
@@ -35,6 +36,7 @@ namespace C_ADMIN_OOSD
 
         private void Login_Click(object sender, EventArgs e)
         {
+            /*
             DBData.DB = TBDB.Text;
             DBData.IP = TBIP.Text;
             DBData.Pass = TBPass.Text;
@@ -44,7 +46,7 @@ namespace C_ADMIN_OOSD
             LTest.Text = TestOutput + DBLogin;
             MessageBox.Show(DBLogin, "TESTBOX");
             DBData.DBCon();
-
+            */
         }
 
         private void BClose_Click(object sender, EventArgs e)
