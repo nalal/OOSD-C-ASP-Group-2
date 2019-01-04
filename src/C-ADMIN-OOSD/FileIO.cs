@@ -13,7 +13,7 @@ namespace C_ADMIN_OOSD
             //Use this string to identify things
         public static string Name = "";
             //_DIR vars
-                //ProgramDIR
+                //Program DIR
         public static string localD = Environment.CurrentDirectory;
                 //Main data DIR
         public static string localAD = Path.Combine(localD, "Data");
@@ -30,6 +30,8 @@ namespace C_ADMIN_OOSD
             //_Active vars
                 //Active data for file edit
         public static List<string> activeData = new List<string>();
+                //List box entries
+        public static List<string> lbList = new List<string>();
 
         //-Init directories
         public static void initDIR()
@@ -94,6 +96,16 @@ namespace C_ADMIN_OOSD
                 result = true;
             }
             return result;
+        }
+
+        //-Populate listbox
+        public static void loadFromFiles(string dir, List<string> ls)
+        {
+            string[] files = Directory.GetFiles(dir);
+            foreach(string i in files)
+            {
+                ls.Add(i);
+            }
         }
     }
 }
