@@ -104,6 +104,7 @@ namespace C_ADMIN_OOSD
             string[] files = Directory.GetFiles(dir);
             foreach(string i in files)
             {
+                i.Replace(dir, "");
                 ls.Add(i);
             }
         }
