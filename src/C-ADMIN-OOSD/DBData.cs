@@ -15,6 +15,8 @@ using MySql.Data.MySqlClient;
 
 public class DBData
 {
+
+    /*
     public static string User = "";
     public static string DB = "";
     public static string IP = "";
@@ -28,4 +30,5 @@ public class DBData
         conn.Open();
         MySqlScript script = new MySqlScript(conn, testscript1);
     }
+    */
 }

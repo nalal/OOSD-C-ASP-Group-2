@@ -32,5 +32,16 @@ namespace C_ADMIN_OOSD.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.163.37.85;Initial Catalog=TravelExperts;Persist Security Info=True" +
+            ";User ID=sa")]
+        public string TravelExpertsConnectionString {
+            get {
+                return ((string)(this["TravelExpertsConnectionString"]));
+            }
+        }
     }
 }
