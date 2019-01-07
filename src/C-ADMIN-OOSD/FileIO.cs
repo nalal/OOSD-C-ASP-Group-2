@@ -101,8 +101,9 @@ namespace C_ADMIN_OOSD
         //-Populate listbox
         public static void loadFromFiles(string dir, List<string> ls)
         {
-            string[] files = Directory.GetFiles(dir);
-            foreach(string i in files)
+            string filemake = Path.Combine(localAD, id);
+            //Check if file exists
+            if (File.Exists(filemake) != true)
             {
                 i.Replace(dir, "");
                 ls.Add(i);
